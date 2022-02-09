@@ -1,12 +1,29 @@
-from abc import ABC, abstractclassmethod
+"""
+helloworlder
+"""
+
+from abc import ABC, abstractmethod
+
 
 class HelloWorlder(ABC):
-    @abstractclassmethod
-    def hello(self, suffix: str) -> str:
-        """suffix a hello."""
-        pass
+    """
+    helloworlder interface
+    """
 
-    @abstractclassmethod
+    @abstractmethod
+    def hello(self, suffix: str) -> str:
+        """
+        This abstract method should return a suffixed string:
+        Returns:
+            str: A string
+        """
+        raise NotImplementedError
+
+    @abstractmethod
     def world(self, prefix: str) -> str:
-        """prefix a world."""
-        pass
+        """
+        This abstract method should return a prefixed string:
+        Returns:
+            str: A string
+        """
+        raise NotImplementedError
