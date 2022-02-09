@@ -6,7 +6,7 @@ class Greet:
   def __init__(self, helloworlder: HelloWorlder):
     self.__helloworlder = helloworlder
 
-  def run(self):
-    print(f"a: {self.__helloworlder.hello('world')}")
-    print(f"b: {self.__helloworlder.world('hello')}")
+  def run(self, hello: str, world: str) -> None:
+    print(f"a: {self.__helloworlder.hello(world)}")
+    print(f"b: {self.__helloworlder.world(hello)}")
 

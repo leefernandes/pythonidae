@@ -5,11 +5,11 @@ from helloworld.vietnamese import Vietnamese
 def main():
     vietnamese = Vietnamese
     greetInVietnamese = Greet(vietnamese)
-    greetInVietnamese.run()
+    greetInVietnamese.run('🙂 xin chào', 'thế giới 🙂')
 
     english = English
     greetInEnglish = Greet(english)
-    greetInEnglish.run()
+    greetInEnglish.run('😈 hello', 'world 😈')
 
 if __name__ == "__main__":
     main()
