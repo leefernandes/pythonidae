@@ -1,12 +1,12 @@
 from helloworld.helloworlder import HelloWorlder
 
 class Greet:
-  helloworlder: HelloWorlder = None
+  __helloworlder: HelloWorlder = None
 
   def __init__(self, helloworlder: HelloWorlder):
-    self.helloworlder = helloworlder
+    self.__helloworlder = helloworlder
 
   def run(self):
-    print(self.helloworlder.hello("world"))
-    print(self.helloworlder.world("hello"))
+    print(f"a: {self.__helloworlder.hello('world')}")
+    print(f"b: {self.__helloworlder.world('hello')}")
 
