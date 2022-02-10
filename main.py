@@ -6,6 +6,9 @@ from greet.greet import Greet
 from helloworld.english import English
 from helloworld.vietnamese import Vietnamese
 
+from datetime import datetime
+from pandas import Timestamp
+
 
 def main():
     """
@@ -18,6 +21,13 @@ def main():
     english = English()
     greet_in_english = Greet(english)
     greet_in_english.run("😈 hello", "world 😈")
+    print("")
+    timestamp()
+
+
+def timestamp():
+    ts = Timestamp(datetime.now())
+    print(f"{ts.year}Q{ts.quarter}")
 
 
 if __name__ == "__main__":
